@@ -1,0 +1,37 @@
+{
+  "name": "@boomtax/mcp-server",
+  "version": "1.0.0",
+  "description": "MCP server for querying BoomTax filing data through AI assistants",
+  "type": "module",
+  "main": "index.js",
+  "bin": {
+    "boomtax-mcp": "./index.js"
+  },
+  "files": [
+    "index.js",
+    "README.md"
+  ],
+  "engines": {
+    "node": ">=18"
+  },
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/boomtax/mcp-server"
+  },
+  "author": "BoomTax <support@boomtax.com>",
+  "homepage": "https://www.boomtax.com",
+  "keywords": [
+    "mcp",
+    "boomtax",
+    "tax",
+    "1099",
+    "w2",
+    "e-file",
+    "model-context-protocol"
+  ],
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.10.0",
+    "zod": "^3.23.0"
+  }
+}

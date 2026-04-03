@@ -1,0 +1,48 @@
+{
+  "name": "@boomtax/mcp-server",
+  "display_name": "BoomTax",
+  "description": "Query your BoomTax tax filing data — filings, forms, payers, e-file status, and errors — from any AI assistant.",
+  "homepage": "https://www.boomtax.com",
+  "repository": "https://github.com/boomtax/mcp-server",
+  "categories": ["accounting", "tax", "finance"],
+  "tools": [
+    "list_filings",
+    "get_filing_details",
+    "get_filing_summary",
+    "list_filing_forms",
+    "get_form",
+    "get_efile_status",
+    "get_efile_errors",
+    "list_payers",
+    "get_payer",
+    "list_filing_types"
+  ],
+  "connections": {
+    "remote": {
+      "url": "https://api.boomtax.com/mcp",
+      "transport": "streamable-http",
+      "authentication": {
+        "type": "bearer",
+        "instructions": "Obtain a JWT token via POST https://api.boomtax.com/Token with your BoomTax API credentials."
+      }
+    },
+    "stdio": {
+      "command": "npx",
+      "args": ["@boomtax/mcp-server"],
+      "env": {
+        "BOOMTAX_API_URL": {
+          "description": "BoomTax API URL",
+          "default": "https://api.boomtax.com"
+        },
+        "BOOMTAX_API_USERNAME": {
+          "description": "BoomTax account email",
+          "required": true
+        },
+        "BOOMTAX_API_PASSWORD": {
+          "description": "BoomTax account password",
+          "required": true
+        }
+      }
+    }
+  }
+}
