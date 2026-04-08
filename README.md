@@ -2,11 +2,13 @@
 
 Query your BoomTax tax filing data from any AI assistant that supports the [Model Context Protocol](https://modelcontextprotocol.io) — Claude, Cursor, Windsurf, VS Code Copilot, and more.
 
+> **IRIS-Ready:** BoomTax files all 1099 forms through IRS IRIS. The `list_filing_types` and `list_filings` tools include a `filingSystem` field showing which IRS system each filing uses (IRIS, AIR, BSO, PDR). [Learn more about the FIRE-to-IRIS transition](https://www.boomtax.com/irs-iris)
+
 ## Tools
 
 | Tool | Description |
 |------|-------------|
-| `list_filings` | List filings with filters (tax year, form type, status) |
+| `list_filings` | List filings with filters (tax year, form type, status). Includes `filingSystem` field. |
 | `get_filing_details` | Filing detail with payer summary and e-file status |
 | `get_filing_summary` | Aggregate counts by status and form type |
 | `list_filing_forms` | List forms in a filing |
@@ -15,9 +17,18 @@ Query your BoomTax tax filing data from any AI assistant that supports the [Mode
 | `get_efile_errors` | E-file errors with codes and messages |
 | `list_payers` | List payers across filings |
 | `get_payer` | Payer details for a filing |
-| `list_filing_types` | All supported filing types and e-file availability |
+| `list_filing_types` | All supported filing types, e-file availability, and filing system (IRIS/AIR/BSO/PDR) |
 
 All tools are read-only. TINs are always masked (last 4 digits only).
+
+## Supported Filing Systems
+
+| System | Forms | Status |
+|--------|-------|--------|
+| **IRIS** | 1099-NEC, 1099-MISC, 1099-INT, 1099-DIV, 1099-K, 1099-R, 1099-SA, 1099-C, W-2G, 5498-SA | Active (replaces FIRE on Dec 31, 2026) |
+| **AIR** | 1094-B, 1095-B, 1094-C, 1095-C | Active |
+| **BSO** | W-2 | Active |
+| **PDR** | 1099-HC | Active |
 
 ## Prerequisites
 
@@ -182,7 +193,7 @@ Once connected, try asking your AI assistant:
 - "What's the e-file status of my W-2 filing?"
 - "Are there any e-file errors on my 1099-NEC filing?"
 - "List all my payers"
-- "What filing types does BoomTax support?"
+- "What filing types does BoomTax support and which use IRIS?"
 
 ## Security
 
