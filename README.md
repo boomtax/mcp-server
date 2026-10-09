@@ -4,7 +4,7 @@ Read-only BoomTax filing tools for Claude, ChatGPT, Codex, Cursor, Windsurf, VS 
 
 The hosted endpoint is **https://api.boomtax.com/mcp**, using Streamable HTTP and OAuth. API access must be enabled on your BoomTax account; contact [support@boomtax.com](mailto:support@boomtax.com) if needed.
 
-> Release status: version 2.0.0 is prepared in this source tree. The published npm 1.0.0 client uses legacy password authentication. Until 2.0.0 is published, use a remote connection or run the local client from this source tree. Cloud OAuth compatibility also requires the corresponding API update; see [release validation](docs/release.md).
+> Release status (October 9, 2026): the hosted API update is deployed, and the remote server is published in the official MCP Registry as `io.github.boomtax/mcp-server`, version 2.0.0. The npm 2.0.0 client is not yet published; npm 1.0.0 uses legacy password authentication. Use the remote connection or run the local client from this source tree. See [release validation](docs/release.md) for client verification and remaining publication work.
 
 ## Tools
 
