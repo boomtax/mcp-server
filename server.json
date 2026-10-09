@@ -1,0 +1,20 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "io.github.boomtax/mcp-server",
+  "title": "BoomTax",
+  "description": "Read-only BoomTax tools for filings, forms, payers, and e-file status through OAuth.",
+  "version": "2.0.0",
+  "repository": { "url": "https://github.com/boomtax/mcp-server", "source": "github" },
+  "websiteUrl": "https://api.boomtax.com",
+  "remotes": [{ "type": "streamable-http", "url": "https://api.boomtax.com/mcp" }],
+  "packages": [{
+    "registryType": "npm",
+    "identifier": "@boomtax/mcp-server",
+    "version": "2.0.0",
+    "transport": { "type": "stdio" },
+    "environmentVariables": [
+      { "name": "BOOMTAX_CLIENT_ID", "description": "BoomTax read-scoped API credential client ID", "isRequired": true },
+      { "name": "BOOMTAX_CLIENT_SECRET", "description": "BoomTax API credential secret", "isRequired": true, "isSecret": true }
+    ]
+  }]
+}
