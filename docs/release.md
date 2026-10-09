@@ -22,6 +22,7 @@ Production verification covered OAuth discovery, authenticated MCP initializatio
 | [Official MCP Registry](https://registry.modelcontextprotocol.io/v0.1/servers?search=io.github.boomtax%2Fmcp-server) | Active remote-only entry, version 2.0.0. |
 | [awesome-remote-mcp-servers](https://github.com/punkpeye/awesome-remote-mcp-servers/pull/1511) | Submitted; endpoint and connector checks passed. Maintainer review pending. |
 | [awesome-mcp-servers](https://github.com/punkpeye/awesome-mcp-servers/pull/16079) | Submitted; requires a separate Glama installable-server entry and score badge. The existing hosted connector does not satisfy that check. |
+| [MCPServers.org](https://mcpservers.org/submit) | Free submission accepted for review on October 9, 2026. The confirmation page gives a two-week review window; publication is pending. |
 | [PulseMCP](https://www.pulsemcp.com/submit) | Submissions are temporarily paused. The directory recommends official MCP Registry publication and says it will resume importing entries when its pipeline reopens. |
 
 ## Existing listings
